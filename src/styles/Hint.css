@@ -1,0 +1,23 @@
+.hint_window {
+    position: absolute;
+    transform: translate(4px, -100%);
+    padding: 14px;
+    background: #ffffff;
+    width: 246px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px 0px rgba(95, 105, 131, 0.1), 0px 4px 24px 0px rgba(95, 105, 131, 0.04);
+    gap: 8px;
+
+    .hint_window__title {
+        font-weight: 5000;
+        font-size: 14px;
+        color: #050d33;
+        margin-bottom: 8px;
+    }
+
+    .hint_window__text {
+        font-weight: 400;
+        font-size: 12px;
+        color: #7b7d85;
+    }
+}

@@ -1,0 +1,56 @@
+@import '@yandex/ymaps3-default-ui-theme/dist/esm/index.css';
+
+
+/* Сброс стандартных стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Тёмный текст */
+    padding: 20px;
+    margin: 0;
+}
+
+/* Стили для контейнера, чтобы приложение выглядело аккуратно */
+#root {
+    max-width: 2000px;
+    max-height: 800px;
+    margin: 0 auto; /* Центрируем */
+}
+
+/* Стили заголовков */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Пример базовых стилей для кнопки */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для компонента карты */
+#map {
+    width: 200%;
+    height: 5000px; /* Установим фиксированную высоту для карты */
+}

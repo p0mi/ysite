@@ -1,0 +1,37 @@
+{
+  "name": "maproject",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "private": true,
+  "dependencies": {
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@yandex/ymaps3-default-ui-theme": "^0.0.19",
+    "@yandex/ymaps3-hint": "^0.0.9",
+    "@yandex/ymaps3-types": "^1.0.15731128",
+    "css-select": "^5.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "^5.0.1",
+    "svgo": "^3.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
