@@ -13,7 +13,7 @@ COPY ./node_modules/@yandex/ymaps3-default-ui-theme/dist/esm/index.css \
 FROM nginx:stable-alpine AS production-stage
 
 COPY --from=build-stage /build /usr/share/nginx/html/
-COPY --from=build-stage nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build-stage nginx.conf /etc/nginx/nginx.conf
 
 
 EXPOSE 3000
