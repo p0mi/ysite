@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { YMapDefaultMarker } from '@yandex/ymaps3-default-ui-theme'
 import {YMapHint, YMapHintContext} from '@yandex/ymaps3-hint'
 import { LOCATION,MARKERS_COORDINATES,MARKER_PROPS,HINTS} from "./variables";
-import "styles/Hint.css"
+import "./styles/Hint.css"
 // Массив с координатами маркеров (например, для музеев)
 
 
@@ -23,7 +23,7 @@ const MapComponent = ({ x_cord, y_cord }) => {
 
             await ymaps3.ready;
 
-            const { YMap, YMapMarker, YMapDefaultFeaturesLayer, YMapDefaultSchemeLayer } = ymaps3;
+            const { YMap, YMapDefaultFeaturesLayer, YMapDefaultSchemeLayer } = ymaps3;
 
             const mapContainer = document.getElementById('map');
             if (!mapContainer) {
@@ -131,8 +131,6 @@ const MapComponent = ({ x_cord, y_cord }) => {
 const MapPage = () => {
     const { id } = useParams();
     const [coordinates, setCoordinates] = useState(null);
-    const [reviews, setReviews] = useState([]);
-    const [reviewText, setReviewText] = useState("");
 
     useEffect(() => {
         const index = parseInt(id);
@@ -141,17 +139,17 @@ const MapPage = () => {
         }
     }, [id]);
 
-    const handleReviewChange = (event) => {
-        setReviewText(event.target.value);
-    };
-
-    const handleReviewSubmit = (event) => {
-        event.preventDefault();
-        if (reviewText.trim() !== "") {
-            setReviews([...reviews, reviewText]);
-            setReviewText("");
-        }
-    };
+    // const handleReviewChange = (event) => {
+    //     setReviewText(event.target.value);
+    // };
+    //
+    // const handleReviewSubmit = (event) => {
+    //     event.preventDefault();
+    //     if (reviewText.trim() !== "") {
+    //         setReviews([...reviews, reviewText]);
+    //         setReviewText("");
+    //     }
+    // };
 
     return (
         <div>
