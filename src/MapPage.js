@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useParams } from 'react-router-dom';
 import { YMapDefaultMarker } from '@yandex/ymaps3-default-ui-theme'
 import {YMapHint, YMapHintContext} from '@yandex/ymaps3-hint'
-import { LOCATION,MARKERS_COORDINATES,MARKER_PROPS,HINTS} from "./variables";
+import { LOCATION,MARKERS_COORDINATES,MARKER_PROPS,HINTS} from "./variables.ts";
 import "./styles/Hint.css"
 // Массив с координатами маркеров (например, для музеев)
 
