@@ -8,8 +8,8 @@ RUN npm install
 COPY . .
 
 RUN npm run build
-RUN ln -s /node_modules/ymaps3-default-ui-theme/dist/esm/index.css \
-       /node_modules/@yandex/ymaps3-hint/dist/esm/YMapHint/index.css
+COPY ./node_modules/ymaps3-default-ui-theme/dist/esm/index.css \
+      /node_modules/@yandex/ymaps3-hint/dist/esm/YMapHint/index.css
 FROM nginx:stable-alpine AS production-stage
 
 COPY --from=build-stage /build /usr/share/nginx/html/
