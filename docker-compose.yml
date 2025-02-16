@@ -1,3 +1,6 @@
+networks:
+  dev:
+
 services:
   web:
     build:
@@ -6,6 +9,8 @@ services:
     container_name: web
     ports:
       - 8080:80
+    networks:
+      dev:
   nginx:
     image: nginx:stable-alpine
     container_name: nginx
@@ -15,3 +20,5 @@ services:
       - './nginx.conf:/etc/nginx/nginx.conf'
     depends_on:
       - web
+    networks:
+      dev:
